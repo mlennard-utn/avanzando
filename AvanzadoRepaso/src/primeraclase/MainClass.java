@@ -11,14 +11,11 @@ public class MainClass {
 		
 		Manager jefeSenado = createManager("Jefe Senado", "senado", 200);
 		jefeSenado.setReportTo(presidente);
-		
-		
 		jefeSenado.setReportees(generateRandomEmployees(generarRandomInt(10,100), "senado", 200, jefeSenado));
 		
 		Manager jefeDiputado = createManager("Jefe Diputado", "congreso", 300);
 		jefeDiputado.setReportTo(presidente);
-		
-		
+		jefeDiputado.setReportees(generateRandomEmployees(generarRandomInt(10, 100), "diputado", 100, jefeDiputado));
 		
 	}
 	
