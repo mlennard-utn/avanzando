@@ -1,6 +1,5 @@
 Modelar la estructura:
-
-														Presidente legajo 1, presidencia
+Presidente legajo 1, presidencia
 	Jefe Senado, legajo 100, senado			Jefe Diputados, legajo 200, congreso
 Empleado	.....								Empleados ....
 
