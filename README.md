@@ -1,7 +1,8 @@
 Modelar la estructura:
-Presidente legajo 1, presidencia
-	Jefe Senado, legajo 100, senado			Jefe Diputados, legajo 200, congreso
-Empleado	.....								Empleados ....
+
+nivel 1) Presidente legajo 1, presidencia
+nivel 2) Jefe Senado, legajo 100, senado | Jefe Diputados, legajo 200, congreso
+nivel 3) Empleados senado | Empleados diputados
 
 1) Hacer un programa que genere la estructura anteriormente mencionada (cantidad de empleados aleatoria entre 10 y 100)
 
@@ -9,9 +10,9 @@ Empleado	.....								Empleados ....
 
 Presidente
 --> Jefe Senado (#cantidad empleados)
-----> Empleado (mostrar solo los primeros 10)
+----> Empleade (mostrar solo los primeros 10)
 --> Jefe Diputados (#cantidad empleados)
-----> Empleado (mostrar solo los primeros 10)
+----> Empleade (mostrar solo los primeros 10)
 
 2) Modificar las clases para agregarle 'genero' ('M', 'F' u 'O') a los empleados
 
