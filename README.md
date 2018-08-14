@@ -8,11 +8,16 @@ nivel 3) Empleados senado | Empleados diputados
 
 2) Hacer un metodo que muestre parte de la estructura de la siguiente manera:
 
-Presidente
+Presidente (#cantidad reportados)
+
 --> Jefe Senado (#cantidad empleados)
+
 ----> Empleade (mostrar solo los primeros 10)
+
 --> Jefe Diputados (#cantidad empleados)
+
 ----> Empleade (mostrar solo los primeros 10)
+
 
 2) Modificar las clases para agregarle 'genero' ('M', 'F' u 'O') a los empleados
 

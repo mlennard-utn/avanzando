@@ -1,10 +1,13 @@
-package primeraclase;
+package primeraclase.modelo;
+
+import java.util.List;
 
 public class Employee {
 	int legajo;
 	String ubicacion;
-	Manager reportTo;
+	Employee reportTo;
 	String name;
+	List<Employee> reportees;
 	
 	public Employee() {
 		
@@ -22,10 +25,10 @@ public class Employee {
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
 	}
-	public Manager getReportTo() {
+	public Employee getReportTo() {
 		return reportTo;
 	}
-	public void setReportTo(Manager reportTo) {
+	public void setReportTo(Employee reportTo) {
 		this.reportTo = reportTo;
 	}
 
@@ -35,6 +38,14 @@ public class Employee {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public List<Employee> getReportees() {
+		return reportees;
+	}
+
+	public void setReportees(List<Employee> reportees) {
+		this.reportees = reportees;
 	}
 	
 }
