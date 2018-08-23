@@ -1,10 +1,10 @@
-package primeraclase;
+package primeraclase.vista;
 
 import primeraclase.modelo.Employee;
 import primeraclase.modelo.Votador;
 import primeraclase.servicio.GestorEmpleados;
 
-public class MainClass {
+public class CreadorEstructura {
 
 	public static void main(String[] args) {
 		Employee presidente = GestorEmpleados.createEmployee(100, "Presidente", "presidencia");
