@@ -10,4 +10,5 @@ public interface EmployeeDAO {
 	
 	public List<Employee> recuperar();
 	
+	public List<String> recuperarEmpleados();
 }

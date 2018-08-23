@@ -16,11 +16,15 @@ public class CreadorEstructura {
 		Employee jefeDiputado = GestorEmpleados.createEmployee(400,"Jefe Diputado", Votador.DIPUTADO);
 		GestorEmpleados.establecerJerarquia(jefeDiputado, presidente);
 		GestorEmpleados.generarEmpleados(jefeDiputado);
-		
-		for (Votador empleado: presidente.getReportees()) {
-			empleado.elegirVoto();
-			System.out.println(empleado.getDecisionVoto());
+				
+		for (String empl : GestorEmpleados.obtenerEmpleados()) {
+			System.out.println(empl);
 		}
+		
+//		for (Votador empleado: presidente.getReportees()) {
+//			empleado.elegirVoto();
+//			System.out.println(empleado.getDecisionVoto());
+//		}
 		
 	}
 	

@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import primeraclase.modelo.Employee;
+import primeraclase.persistencia.EmployeeDAO;
+import primeraclase.persistencia.FileDAOImpl;
+import primeraclase.persistencia.InMemoryDAOImpl;
 
 public class GestorEmpleados {
+	
+	private static EmployeeDAO dao = new FileDAOImpl();
 	
 	public static List<Employee> generateRandomEmployees(int cantidad, String nombreBase, int legajoBase, Employee report){
 		List<Employee> employees = new ArrayList<Employee>();
@@ -16,6 +21,9 @@ public class GestorEmpleados {
 			emp.setName(nombreBase+emp.getLegajo());
 			emp.setUbicacion(report.getUbicacion());
 			emp.setReportTo(report);
+			
+			dao.guardar(emp);
+			
 			employees.add(emp);
 		}
 		
@@ -33,6 +41,8 @@ public class GestorEmpleados {
 		empl.setName(nombre);
 		empl.setUbicacion(ubicacion);
 		
+		dao.guardar(empl);
+		
 		return empl;
 	}
 	
@@ -43,6 +53,10 @@ public class GestorEmpleados {
 	public static void generarAsesores(Employee empleado) {
 		//Generar empleados cantidad de 0 a 10 ... 
 		//  despues la misma logica que la generacion de empleados
+	}
+	
+	public static List<String> obtenerEmpleados(){
+		return dao.recuperarEmpleados();
 	}
 
 }
