@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="AvanzadoRepaso/src"/>
-	<classpathentry kind="lib" path="C:/Programacion/java-avanzado/com.fasterxml.jackson.databind.jar"/>
-	<classpathentry kind="lib" path="C:/Programacion/java-avanzado/jackson-core-2.2.3.jar"/>
-	<classpathentry kind="lib" path="C:/Programacion/java-avanzado/com.fasterxml.jackson.annotations.jar"/>
+	<classpathentry kind="lib" path="libs/com.fasterxml.jackson.annotations.jar"/>
+	<classpathentry kind="lib" path="libs/com.fasterxml.jackson.databind.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-core-2.2.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
