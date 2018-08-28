@@ -15,15 +15,11 @@ public class Employee implements Votador {
 		reportees = new ArrayList<>();
 	}
 	
-	
-	
 	@Override
 	public String toString() {
 		return String.format("legajo=%s, ubicacion=%s, reportTo=%s, name=%s, reportees=%d", legajo,
 				ubicacion, reportTo!=null?reportTo.getName():"", name, reportees.size());
 	}
-
-
 
 	public int getLegajo() {
 		return legajo;

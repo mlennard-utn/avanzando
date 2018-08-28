@@ -11,16 +11,24 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import primeraclase.modelo.Employee;
+import primeraclase.utilidades.Conversor;
 
 public class FileDAOImpl implements EmployeeDAO {
-
-	File empleados = new File("empleados.txt");
+	File empleados;
+	
+	public FileDAOImpl() {
+		 empleados = new File("empleados.txt");	
+	}
 	
 	@Override
 	public void guardar(Employee employee) {
+		ObjectMapper mapper = new ObjectMapper();
+		
 		try(Writer output = new BufferedWriter(new FileWriter(empleados.getName(), true));){
-			output.write(employee.toString());
+			output.write(mapper.writeValueAsString(Conversor.convert(employee)) + "\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
