@@ -5,12 +5,11 @@ import java.util.List;
 
 import primeraclase.modelo.Employee;
 import primeraclase.persistencia.EmployeeDAO;
-import primeraclase.persistencia.FileDAOImpl;
-import primeraclase.persistencia.InMemoryDAOImpl;
+import primeraclase.persistencia.EmployeeDAOFactory;
 
 public class GestorEmpleados {
 	
-	private static EmployeeDAO dao = new FileDAOImpl();
+	private static EmployeeDAO dao = EmployeeDAOFactory.createEmployeeDAO();
 	
 	public static List<Employee> generateRandomEmployees(int cantidad, String nombreBase, int legajoBase, Employee report){
 		List<Employee> employees = new ArrayList<Employee>();
