@@ -1,8 +1,12 @@
 package genericos;
 
+import java.util.Date;
+
 public class Persona implements Saludable, Comparable<Persona> {
 
 	private String name;
+	private Date fechaNacimiento;
+	private transient Double edadActual;
 	
 	public void setName(String name) {
 		this.name = name;
